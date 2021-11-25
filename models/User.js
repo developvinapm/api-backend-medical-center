@@ -1,4 +1,4 @@
-const {Schema , model } = require('mongoose');
+const { Schema , model } = require('mongoose');
 
 const UserSchema = Schema({
     name: {
@@ -28,11 +28,11 @@ const UserSchema = Schema({
         type: String,
         enum: ['Masculino', 'Femenino']
     },
-    birthday: {
-        type: Date,
-    },
     gender_identity: {
         type: String,
+    },
+    birthday: {
+        type: Date,
     },
     phone: {
         type: String
@@ -42,6 +42,7 @@ const UserSchema = Schema({
     },
     role: {
         type: String,
+        default: 'USER_ROLE',
         enum: ['USER_ROLE', 'ADMIN_ROLE']
     },
     status: {
